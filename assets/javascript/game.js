@@ -1,17 +1,25 @@
-// add document .ready function for jquery to make sure javascript doesn't load before page itself in browser
-   
-document.getElementById("section-random-number").innerHTML =
-Math.floor(Math.random() * 51);
-
+// add document .ready function for jquery to make sure javascript doesn't load before page itself in browser  
 $(document).ready(function() {
+
+    let randomNum = Math.floor(Math.random() * 101);
+    $('.section-random-number').text('Add up gems to equal this number: ' + randomNum)
     
-    let scoreWins = $('.scoreWins');
-    scoreWins.html('<p>Wins: </p>');
+    // rules for score counter
+    let scoreWins = 0;
+    
+    let scoreLoss = 0 
 
-    // if statement 
+    function win(){
+        alert('Nice job');
+        scoreWins++;
+        $('.scoreWins').text('Wins: ' + scoreWins)
+    }
 
-    let scoreLoss = $('.scoreLoss');
-    scoreLoss.html('Losses: ');
+    function loss(){
+        alert('You lose');
+        scoreLoss++;
+        $('.scoreLoss').text('Losses: ' + scoreLoss);
+    }
 
     // might be if statement combined with wins (if number counter for gems === random number, then +1 wins)
     // if number counter for gems !== random number, then Losses -- (create variable for losses and then LossVariable--)
@@ -34,12 +42,26 @@ $(document).ready(function() {
         gemScore = gemScore + randomGem1;
         $('.section-total-score-number').text(gemScore);
         console.log(randomGem1);
+        if (gemScore == randomNum){
+            win();
+        }
+        
+        else if (gemScore > randomNum){
+            loss();
+        }
     });
 
     $('.gem2').on('click', function(){
         gemScore = gemScore + randomGem2;
         $('.section-total-score-number').text(gemScore);
         console.log(randomGem2);
+        if (gemScore == randomNum){
+            win();
+        }
+        
+        else if (gemScore > randomNum){
+            loss();
+        }
         
     });
 
@@ -47,6 +69,13 @@ $(document).ready(function() {
         gemScore = gemScore + randomGem3;
         $('.section-total-score-number').text(gemScore);
         console.log(randomGem3);
+        if (gemScore == randomNum){
+            win();
+        }
+        
+        else if (gemScore > randomNum){
+            loss();
+        }
         
     });
 
@@ -54,6 +83,13 @@ $(document).ready(function() {
         gemScore = gemScore + randomGem4;
         $('.section-total-score-number').text(gemScore);
         console.log(randomGem4);
+        if (gemScore == randomNum){
+            win();
+        }
+        
+        else if (gemScore > randomNum){
+            loss();
+        }
         
     });
 // need to make this score increase every time a gem is clicked, not just add all random gem numbers together
