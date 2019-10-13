@@ -1,7 +1,7 @@
 // add document .ready function for jquery to make sure javascript doesn't load before page itself in browser  
 $(document).ready(function() {
 
-    let randomNum = Math.floor(Math.random() * 101);
+    let randomNum = Math.floor(Math.random() * 101 + 30);
     $('.section-random-number').text('Add up gems to equal this number: ' + randomNum)
     
     // rules for score counter
@@ -12,13 +12,15 @@ $(document).ready(function() {
     function win(){
         alert('Nice job');
         scoreWins++;
-        $('.scoreWins').text('Wins: ' + scoreWins)
+        $('.scoreWins').text('Wins: ' + scoreWins);
+        resetGame();
     }
 
     function loss(){
         alert('You lose');
         scoreLoss++;
         $('.scoreLoss').text('Losses: ' + scoreLoss);
+        resetGame();
     }
 
     // might be if statement combined with wins (if number counter for gems === random number, then +1 wins)
@@ -34,6 +36,18 @@ $(document).ready(function() {
     let randomGem2 = Math.floor(Math.random() * 50);
     let randomGem3 = Math.floor(Math.random() * 50);
     let randomGem4 = Math.floor(Math.random() * 50);
+
+    // reset function
+    function resetGame(){
+        randomNum = Math.floor(Math.random() * 101 + 30);
+        $('.section-random-number').text('Add up gems to equal this number: ' + randomNum);
+        randomGem1 = Math.floor(Math.random() * 50);
+        randomGem2 = Math.floor(Math.random() * 50);
+        randomGem3 = Math.floor(Math.random() * 50);
+        randomGem4 = Math.floor(Math.random() * 50);
+        gemScore = 0;
+        $('.section-total-score-number').text(gemScore);
+    }
 
     // is there a for loop for this?
     // create an array for the variables randomGem[i]
