@@ -1,0 +1,77 @@
+html {
+    background-color:black;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+.section-header{
+    display: inline-block;
+    background-color: aliceblue;
+    font-family: 'Mansalva', cursive; 
+    font-size: 160%;
+    margin-left: 20px;
+    margin-top: 5%;
+    padding-top: 20px;
+    height: 40px;
+    width: 200px;
+}
+
+h1{
+    text-align: center;
+}
+
+.section-instructions{
+    display: inline-block;
+    background-color: aliceblue;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+ul.a {
+    list-style-type: circle;
+  }
+
+.section-random-number{
+    display: block;
+    background-color: aliceblue;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 200px;
+}
+
+.section-score-counter{
+    display: block;
+    background-color: aliceblue;
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.scoreWins{
+    width: 80px;
+
+}
+
+.images{
+    display: block;
+    float: left;
+    margin-left: -310px;
+    margin-top: 80px;
+}
+
+.section-total-score-words{
+    display: block;
+    background-color: aliceblue;
+}
+
+.section-total-score-numbers{
+    display: block;
+    background-color: aliceblue;
+}

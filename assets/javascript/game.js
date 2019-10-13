@@ -29,7 +29,7 @@ $(document).ready(function() {
     // program crystal one and then score counter to see if it's showing up
     
     let gemScore = 0 
-    $('.section-total-score-number').text(gemScore);
+    $('.section-total-score-number').text(gemScore).css({'display':'block','background-color':'aliceblue', 'margin-top':'20px', 'font-size':'40px'});
 
 
     let randomGem1 = Math.floor(Math.random() * 50);

@@ -4,8 +4,12 @@
         <title>Unit 4 Game</title>
         <link rel="stylesheet" href="assets/css/reset.css">
         <link rel="stylesheet" href="assets/css/style.css">
-
+        <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
     </head>
+
+    <body>
+
+<div class="text">
 
     <div class="section-header">
         <h1>CrystalsCollector</h1>
@@ -14,11 +18,14 @@
     <br>
 
     <div class="section-instructions">
-        <p>You will be given a random number at the start of this game</p>
-        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your score</p> 
-        <p>You win the game by matching your total score to the random number generated for you at the beginning of the game. You lose the game if your total score goes above the random number</p>
-        <p>The value of each crystal is hidden from you until you click on it.</p>
-        <p>Each time the game starts, the game will change the values of each crystal.</p>
+        <ul class="a">
+            <li>You will be given a random number at the start of this game</li>
+            <li>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your score</li>
+            <li>You win the game by matching your total score to the random number generated for you at the beginning of the game. You lose the game if your total score goes above the random number</li>
+            <li>The value of each crystal is hidden from you until you click on it.</li>
+            <li>Each time the game starts, the game will change the values of each crystal.</li>
+        </ul>
+
     </div>
 
     <br>
@@ -33,7 +40,11 @@
         <p class="scoreLoss">Losses:</p>
     </div>
 
+</div>
+
     <br>
+
+<div class = 'images'>
 
     <div class="crystal-one">
         <!-- first gem -->
@@ -66,6 +77,11 @@
         <!-- total score number/ counter generated from clicking on gems-->
     </div>
 
+</div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src= "assets/javascript/game.js"></script>
+
+    </body>
+
 </html>
